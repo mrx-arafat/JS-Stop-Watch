@@ -35,4 +35,13 @@ start.addEventListener("click", function () {
     clearInterval(counter);
     counter = false;
   });
+
+  reset.addEventListener("click", function () {
+    clearInterval(counter);
+    counter = false;
+    ms = 00;
+    s = 00;
+    m = 00;
+    time.textContent = m + ":" + s + ":" + ms;
+  });
 });
