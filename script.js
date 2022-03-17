@@ -39,10 +39,11 @@ start.addEventListener("click", function () {
   reset.addEventListener("click", function () {
     clearInterval(counter);
     counter = false;
-    ms = 00;
-    s = 00;
-    m = 00;
-    time.textContent = timeFormat();
+    // ms = 00;
+    // s = 00;
+    // m = 00;
+    // time.textContent = timeFormat();
+    time.innerHTML = "00:00:00";
   });
 });
 
