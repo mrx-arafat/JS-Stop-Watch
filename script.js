@@ -1,4 +1,9 @@
-document.getElementById("start").addEventListener("click", function () {
-  document.querySelector(".timer").textContent =
-    document.querySelector(".timer").textContent + "first test done";
-});
+let ms = 0;
+s = 0;
+m = 0;
+
+let counter;
+
+const start = document.getElementById("start");
+const stop = document.getElementById("stop");
+const reset = document.getElementById("reset");
