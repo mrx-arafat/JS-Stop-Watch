@@ -13,9 +13,10 @@ let time = document.querySelector(".time");
 // start btn
 
 start.addEventListener("click", function () {
-  //setInterval ei fn er vitore dei nai first e
+  if (!counter) {
+    counter = setInterval(run, 10);
+  }
 
-  counter = setInterval(run, 10);
   function run() {
     time.textContent = m + ":" + s + ":" + ms;
     ms++;
@@ -24,5 +25,14 @@ start.addEventListener("click", function () {
       ms = 0;
       s++;
     }
+    if (s == 60) {
+      s = 0;
+      m++;
+    }
   }
+
+  stop.addEventListener("click", function () {
+    clearInterval(counter);
+    counter = false;
+  });
 });
