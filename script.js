@@ -10,7 +10,7 @@ const reset = document.getElementById("reset");
 
 let time = document.querySelector(".time");
 
-// start btn
+// start btn er fn er moddhe baki 2ta
 
 start.addEventListener("click", function () {
   if (!counter) {
@@ -18,7 +18,7 @@ start.addEventListener("click", function () {
   }
 
   function run() {
-    time.textContent = m + ":" + s + ":" + ms;
+    time.textContent = timeFormat();
     ms++;
 
     if (ms == 100) {
@@ -42,6 +42,10 @@ start.addEventListener("click", function () {
     ms = 00;
     s = 00;
     m = 00;
-    time.textContent = m + ":" + s + ":" + ms;
+    time.textContent = timeFormat();
   });
 });
+
+function timeFormat() {
+  return m + ":" + s + ":" + ms;
+}
